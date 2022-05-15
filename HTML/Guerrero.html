@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/prism.css">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <script src="../JS/prism.js"></script>
+    <title>Guerrero - Codigo Fuente</title>
+</head>
+
+<body>
+    <header>
+        <h1>PROYECTO RPG</h1>
+    </header>
+    <nav class="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="./diagramaClases.html">Diagrama de clases</a>
+    </nav>
+    <article>
+        <h1>CODIGO FUENTE DE LA CLASE "GUERRERO"</h1>
+        <pre>
+            <code class="language-java">
+                package dam1gomezhidalgo_paula_ej099950miproyectout09;
+
+                /**
+                 *
+                 * @author Paula Gomez Hidalgo
+                 */
+                public class Guerrero extends Personaje {
+                
+                    private double CRIT = 0.7;
+                    private final int DEF_EXTRA = 50;
+                
+                    /**
+                     *
+                     */
+                    public Guerrero() {
+                        setClase("guerrero");
+                        setDef(getDef() + DEF_EXTRA);
+                        setCrit(CRIT);
+                        setNombre("Garen, el poder de Demacia");
+                    }
+                
+                    /**
+                     *
+                     * @param nombre
+                     */
+                    public Guerrero(String nombre) {
+                        super(nombre);
+                        setClase("guerrero");
+                        setDef(getDef() + DEF_EXTRA);
+                        setCrit(CRIT);
+                    }
+                
+                    /**
+                     *
+                     * @return
+                     */
+                    @Override
+                    public int Atacar() {
+                        if (generarProbabilidad(CRIT) == true) {
+                            return getAtq();
+                        } else {
+                            return (int) Math.ceil(CRIT * getAtq());
+                        }
+                
+                    }
+                
+                    /**
+                     *
+                     * @return
+                     */
+                    @Override
+                    public int defensa() {
+                        int plusDef = (int) Math.ceil(getDef() * 0.15);
+                        //System.out.println("¡La defensa ha aumentado " + plusDef + " puntos!");
+                        setDef(getDef() + plusDef);
+                        return getDef();
+                    }
+                
+                    /**
+                     *
+                     * @return
+                     */
+                    public boolean Huir() {
+                        return generarProbabilidad(0.5) == true;
+                    }
+                }                
+    </code>
+        </pre>
+    </article>
+    <footer>
+        <p>1º DAM - PAULA GOMEZ HIDALGO</p>
+        <p>PROYECTO LUCHA RPG</p>
+    </footer>
+</body>
+
+</html>

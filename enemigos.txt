@@ -1,0 +1,15 @@
+golem;El coloso de Tierra;138;58;152
+golem;El terror de las cavernas;140;75;20
+golem;El golem guardian;45;56;180
+golem;El destructor de ciudades;120;140;30
+golem;El giante de las nieves;180;20;40
+bruja;La última guardiana;120;50;57
+bruja;La bruja de los sueños;170;80;50
+bruja;La maldición de las tinieblas;70;140;30
+bruja;Invocadora del sol;140;30;105
+bruja;La bruja escarlata;180;94;70
+dragon;Rhaegal;80;85;30
+dragon;Viserion;132;94;57
+dragon;Drogon;163;108;46
+dragon;Saphira;94;79;48
+dragon;Spyro;105;83;20

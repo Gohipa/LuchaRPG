@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/prism.css">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <script src="../JS/prism.js"></script>
+    <title>Hechizos - Codigo Fuente</title>
+</head>
+
+<body>
+    <header>
+        <h1>PROYECTO RPG</h1>
+    </header>
+    <nav class="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="./diagramaClases.html">Diagrama de clases</a>
+    </nav>
+    <article>
+        <h1>CODIGO FUENTE DE LA CLASE "HECHIZOS"</h1>
+        <pre>
+            <code class="language-java">
+                package dam1gomezhidalgo_paula_ej099950miproyectout09;
+
+                /**
+                 *
+                 * @author Paula Gomez Hidalgo
+                 */
+                public class Hechizos {
+                
+                    /**
+                     * Recupera un 20% de la vida del personaje
+                     *
+                     * @param mago
+                     * @return 
+                     */
+                    public int sanar(Personaje mago) {
+                        int plusVida = (int) Math.ceil(mago.getVida() + 0.2);
+                        mago.setVida(mago.getVida() + plusVida);
+                        return plusVida;
+                    }
+                
+                    /**
+                     * Reduce el ataque básico del enemigo
+                     *
+                     * @param enemigo
+                     * @return 
+                     */
+                    public int aturdir(Personaje enemigo) {
+                        int bajarAtq = (int) Math.ceil(enemigo.getAtq() * 0.2);
+                        enemigo.setAtq(enemigo.getAtq() - bajarAtq);
+                        return bajarAtq;
+                    }
+                
+                    /**
+                     * Baja la defensa del enemigo
+                     * @param enemigo 
+                     * @return  
+                     */
+                    public int cegar(Personaje enemigo) {
+                        int bajarDef = (int) Math.ceil((enemigo.getDef()) * 0.2);
+                        enemigo.setDef(enemigo.getDef() - bajarDef);
+                        return bajarDef;
+                    }
+                }                     
+    </code>
+        </pre>
+    </article>
+    <footer>
+        <p>1º DAM - PAULA GOMEZ HIDALGO</p>
+        <p>PROYECTO LUCHA RPG</p>
+    </footer>
+</body>
+
+</html>
